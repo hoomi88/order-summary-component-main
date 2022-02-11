@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap");
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@900&display=swap');
+
+    body {
+      background-image: url("./images/pattern-background-desktop.svg");
+      background-repeat: repeat-x;
+      background-color: hsl(225, 100%, 94%);
+      /*background-position: 100%;*/
+      background-size: 100% 55%;
+      font-family: 'Red Hat Display', sans-serif;
+      font-size: 16px;   
+      margin: 0;
+    }
+
+    @media only screen and (max-width: 375px) {
+      body {
+        background-image: url("./images/pattern-background-mobile.svg");
+      }
+    }
+    .area {
+      height: 95vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      position: relative;      
+      width: 420px;
+      height: 660px;
+      display: block;
+      margin: auto;
+      border-radius: 15px;
+      background-color: #fff;
+      box-shadow: 0 20px 20px 0 hsl(225, 100%, 90%);
+    }
+
+    @media only screen and (max-width: 375px) {
+      .card {
+        width: 320px;
+        height: 560px;
+      }
+    }
+
+    .card-image {
+      border-radius: 15px 15px 0 0;
+      width: 100%;
+    }
+
+    .card-title {
+      font-weight: 900;
+      font-size: 28px;
+      text-align: center;
+      margin-left: 7%;
+      margin-right: 7%;
+      margin-top: 10%;
+      color: hsl(223, 47%, 23%);
+    }
+
+    @media only screen and (max-width: 375px) {
+      .card-title {
+        font-size: 22px;
+      }
+    }
+
+    .card-text {
+      font-weight: 500;
+      font-size: 16px;
+      text-align: center;
+      margin-left: 12%;
+      margin-right: 12%;
+      margin-top: 0;
+      color: hsl(224, 23%, 55%);
+      line-height: 1.6;
+    }
+
+    @media only screen and (max-width: 375px) {
+      .card-text {
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+    }
+
+    .summary {
+      height: 90px;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-top: 5%;
+      margin-bottom: 7%;
+      background-color: hsl(225, 100%, 98%);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .music-container {
+      margin: auto;
+      display: flex;
+    }
+
+    .music-img {
+      margin: auto;
+      width: 45px;
+    }
+
+    .plan-details {
+      width: 140px;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 0;
+    }
+
+    .plan-type {
+      color: hsl(223, 47%, 23%);
+      font-weight: 700;
+    }
+
+    .plan-price {
+      color: hsl(224, 23%, 55%);
+    }    
+
+    .change-container {
+      margin: auto;      
+    }
+
+    .change-link {
+      color:hsl(245, 75%, 52%);
+      font-weight: 700;
+    }
+
+    .change-link:hover {
+      color:hsl(245, 50%, 52%);      
+    }
+
+    @media only screen and (max-width: 375px) {
+      .summary {      
+        margin-left: 7%;
+        margin-right: 7%;
+      }
+      .plan-details {
+        width: 120px;        
+      }
+      .change-container {
+        margin: auto;      
+        width: 60px;
+      }      
+    }
+
+    .proceed {
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-top: 7%;
+      margin-bottom: 7%;
+      font-weight: 700;
+      color: white;
+      background-color: hsl(245, 75%, 52%);
+      box-shadow: 0 15px 15px 0 hsl(245, 75%, 90%);
+      text-align: center;
+      font-size: 14px;
+      padding-top: 3%;
+      padding-bottom: 3%;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    @media only screen and (max-width: 375px) {
+      .proceed {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        margin-left: 7%;
+        margin-right: 7%;
+      }
+    }
+
+
+    .proceed:hover {
+      background-color: hsl(245, 50%, 52%);
+    }
+
+    .cancel {
+      font-weight: 700;
+      text-align: center;
+      font-size: 14px;
+      color: hsl(224, 23%, 55%);
+      cursor: pointer;
+    }
+
+    
+    
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="area">
+    <div class="card">
+
+      <div>
+        <img class="card-image" src="./images/illustration-hero.svg" alt="illustration-hero">
+      </div>
+
+      <h1 class="card-title">Order Summary</h1>
+
+      <div class="card-text">You can now listen to millions of songs, audiobooks, and podcasts on any 
+        device anywhere you like!</div>
+
+      <div class="summary">
+        <div class="music-container">
+          <img class="music-img" src="./images/icon-music.svg" alt="">
+        </div>
+        <div class="plan-details">
+          <div class="plan-type">
+            Annual Plan
+          </div>
+          <div class="plan-price">
+            $59.99/year
+          </div>          
+        </div>
+        <div class="change-container">
+          <a class="change-link" href="#">Change</a>
+        </div>       
+      </div>
+
+      <div class="proceed">Proceed to Payment</div>
+
+      <div class="cancel">Cancel Order</div>
+    
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/hoomi88">Yuval Carmel</a>.
+  </div>
+</body>
+</html>
