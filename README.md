@@ -25,13 +25,13 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop](./results/desktop.jpg)
-![Mobile](./results/mobile.jpg)
+![Desktop](./results/desktop.png)
+![Mobile](./results/mobile.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://github.com/hoomi88/order-summary-component-main)
+- Live Site URL: [Live URL](https://hoomi88.github.io/order-summary-component-main/)
 
 ## My process
 
